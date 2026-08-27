@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Figtree:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: 'Figtree', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Cormorant Garamond', ui-serif, Georgia, serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --background: oklch(0.985 0.012 85);
+  --foreground: oklch(0.3 0.035 50);
+  --card: oklch(0.995 0.006 90);
+  --card-foreground: oklch(0.3 0.035 50);
+  --popover: oklch(0.997 0.004 90);
+  --popover-foreground: oklch(0.3 0.035 50);
+  --primary: oklch(0.58 0.155 52);
+  --primary-foreground: oklch(0.99 0.01 90);
+  --secondary: oklch(0.945 0.028 80);
+  --secondary-foreground: oklch(0.34 0.04 50);
+  --muted: oklch(0.955 0.02 82);
+  --muted-foreground: oklch(0.5 0.03 55);
+  --accent: oklch(0.94 0.04 72);
+  --accent-foreground: oklch(0.36 0.06 50);
+  --destructive: oklch(0.52 0.15 28);
+  --destructive-foreground: oklch(0.99 0.01 85);
+  --border: oklch(0.89 0.03 78);
+  --input: oklch(0.89 0.03 78);
+  --ring: oklch(0.58 0.155 52);
+  --sidebar: oklch(0.972 0.018 82);
+  --sidebar-foreground: oklch(0.34 0.04 50);
+  --sidebar-border: oklch(0.9 0.028 78);
+  --sidebar-accent: oklch(0.94 0.04 70);
+  --sidebar-accent-foreground: oklch(0.4 0.1 48);
+  --radius: 0.85rem;
+}
+
+.dark {
+  --background: oklch(0.22 0.02 55);
+  --foreground: oklch(0.95 0.015 85);
+  --card: oklch(0.26 0.02 55);
+  --card-foreground: oklch(0.95 0.015 85);
+  --popover: oklch(0.26 0.02 55);
+  --popover-foreground: oklch(0.95 0.015 85);
+  --primary: oklch(0.72 0.13 55);
+  --primary-foreground: oklch(0.22 0.04 50);
+  --secondary: oklch(0.32 0.025 60);
+  --secondary-foreground: oklch(0.95 0.015 85);
+  --muted: oklch(0.32 0.02 60);
+  --muted-foreground: oklch(0.76 0.03 75);
+  --accent: oklch(0.34 0.04 58);
+  --accent-foreground: oklch(0.95 0.015 85);
+  --destructive: oklch(0.68 0.14 28);
+  --destructive-foreground: oklch(0.18 0.03 28);
+  --border: oklch(0.36 0.025 55);
+  --input: oklch(0.36 0.025 55);
+  --ring: oklch(0.72 0.13 55);
+  --sidebar: oklch(0.2 0.02 55);
+  --sidebar-foreground: oklch(0.94 0.015 85);
+  --sidebar-border: oklch(0.34 0.02 55);
+  --sidebar-accent: oklch(0.3 0.04 55);
+  --sidebar-accent-foreground: oklch(0.9 0.06 70);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image:
+      linear-gradient(180deg, oklch(0.97 0.03 70 / 0.55) 0, transparent 220px);
+  }
+
+  h1,
+  h2,
+  .font-serif {
+    font-family: var(--font-serif);
+    font-weight: 600;
+  }
+}
+
+@layer utilities {
+  .surface-shadow {
+    box-shadow:
+      0 1px 2px oklch(0.4 0.05 50 / 0.04),
+      0 10px 28px oklch(0.45 0.06 55 / 0.06);
+  }
+}
