@@ -1,8 +1,8 @@
-# Vani
+# Rama
 
 The library of **VOICE** — Vedic Oasis of Culture and Ethics.
 
-Vani (वाणी) means sacred speech. The collection is Srila Prabhupada’s books, kept for students who borrow, read, and return them.
+The collection is Srila Prabhupada’s books, kept for students who borrow, read, and return them.
 
 Catalog source: [Srila Prabhupada’s books](https://www.srilaprabhupada.co.in/catalog-of-srila-prabhupadas-books)
 

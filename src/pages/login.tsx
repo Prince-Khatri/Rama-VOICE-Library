@@ -46,7 +46,7 @@ export function LoginPage() {
           <div className="mx-auto mb-4 flex size-12 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
             <BookOpen className="size-5" />
           </div>
-          <h1 className="font-serif text-5xl">Vani</h1>
+          <h1 className="font-serif text-5xl">Rama</h1>
           <p className="mt-2 text-sm text-muted-foreground">The library of VOICE — Vedic Oasis of Culture and Ethics.</p>
         </div>
 

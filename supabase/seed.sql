@@ -1,4 +1,4 @@
--- Vani — VOICE library seed
+-- Rama — VOICE library seed
 -- Catalog: https://www.srilaprabhupada.co.in/catalog-of-srila-prabhupadas-books
 -- Re-runnable. Clears books, copies, borrowers, and loans, then loads the Prabhupada catalog
 -- and VOICE students.
@@ -6,7 +6,7 @@
 truncate public.loans, public.book_copies, public.borrowers, public.books restart identity cascade;
 
 update public.library_settings
-set library_name = 'Vani',
+set library_name = 'Rama',
     default_loan_days = 14,
     due_dates_enabled = true;
 

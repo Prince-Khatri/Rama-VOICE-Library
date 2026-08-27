@@ -47,7 +47,7 @@ export function DashboardPage() {
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="text-sm text-muted-foreground">{greetingForHour(new Date().getHours())}</p>
-          <h1 className="font-serif text-3xl tracking-tight">Here’s what’s happening at Vani.</h1>
+          <h1 className="font-serif text-3xl tracking-tight">Here’s what’s happening at Rama.</h1>
         </div>
         <div className="flex gap-2">
           <Button asChild variant="outline">

@@ -12,7 +12,7 @@ import { formatError } from '@/lib/utils'
 
 export function SettingsPage() {
   const { user, signOut } = useAuth()
-  const [libraryName, setLibraryName] = useState('Vani')
+  const [libraryName, setLibraryName] = useState('Rama')
   const [defaultLoanDays, setDefaultLoanDays] = useState(14)
   const [dueDatesEnabled, setDueDatesEnabled] = useState(true)
   const [saving, setSaving] = useState(false)
@@ -33,7 +33,7 @@ export function SettingsPage() {
     setSaving(true)
     try {
       await updateSettings({
-        library_name: libraryName.trim() || 'Vani',
+        library_name: libraryName.trim() || 'Rama',
         default_loan_days: Math.max(1, defaultLoanDays),
         due_dates_enabled: dueDatesEnabled,
       })

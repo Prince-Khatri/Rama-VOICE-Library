@@ -59,7 +59,7 @@ function Brand() {
         <BookOpen className="size-4" />
       </div>
       <div>
-        <p className="font-serif text-xl leading-none">Vani</p>
+        <p className="font-serif text-xl leading-none">Rama</p>
         <p className="text-[11px] tracking-wide text-muted-foreground uppercase">VOICE library</p>
       </div>
     </div>

@@ -1,4 +1,4 @@
--- Vani — VOICE library schema
+-- Rama — VOICE library schema
 -- Run this in the Supabase SQL editor (or via supabase db push).
 
 create extension if not exists pgcrypto;
@@ -78,7 +78,7 @@ create index if not exists loans_active_idx
 
 create table if not exists public.library_settings (
   id uuid primary key default gen_random_uuid(),
-  library_name text not null default 'Vani',
+  library_name text not null default 'Rama',
   default_loan_days integer not null default 14,
   due_dates_enabled boolean not null default true,
   created_at timestamptz not null default now(),
@@ -87,12 +87,12 @@ create table if not exists public.library_settings (
 );
 
 insert into public.library_settings (library_name)
-select 'Vani'
+select 'Rama'
 where not exists (select 1 from public.library_settings);
 
 update public.library_settings
-set library_name = 'Vani'
-where library_name in ('Folio', 'folio');
+set library_name = 'Rama'
+where library_name in ('Folio', 'folio', 'Vani', 'vani');
 
 create or replace function public.set_updated_at()
 returns trigger
@@ -273,7 +273,7 @@ grant execute on function public.return_book(uuid) to authenticated;
 
 
 
--- Vani — VOICE library seed
+-- Rama — VOICE library seed
 -- Catalog: https://www.srilaprabhupada.co.in/catalog-of-srila-prabhupadas-books
 -- Re-runnable. Clears books, copies, borrowers, and loans, then loads the Prabhupada catalog
 -- and VOICE students.
@@ -281,7 +281,7 @@ grant execute on function public.return_book(uuid) to authenticated;
 truncate public.loans, public.book_copies, public.borrowers, public.books restart identity cascade;
 
 update public.library_settings
-set library_name = 'Vani',
+set library_name = 'Rama',
     default_loan_days = 14,
     due_dates_enabled = true;
 
